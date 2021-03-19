@@ -84,7 +84,6 @@ def logout():
     return redirect(url_for("login"))
 
 
-
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongo.db.users.find_one(
