@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
   
-
+<h3 class="light-blue-text text-darken-4 center-align">Tasks</h3>
 <ul class="collapsible">
     {% for task in tasks %}
     <li>
@@ -12,6 +12,7 @@
         <div class="collapsible-body">
             <strong>{{ task.category_name }}</strong>
             <p> {{ task.task_description }} </p>
+            <p> by: {{ task.created_by }}</p>
             {% if task.is_urgent == "on" %}
                 <i class="fas fa-exclamation-cirle light-blue-text text-lighten-2"></i>
             {% endif %}
